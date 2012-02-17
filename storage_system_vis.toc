@@ -1,0 +1,70 @@
+\contentsline {chapter}{List of Tables}{x}{chapter*.2}
+\contentsline {chapter}{List of Figures}{xi}{chapter*.3}
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Current Methods}{1}{section.1.1}
+\contentsline {section}{\numberline {1.2}Our Contribution}{3}{section.1.2}
+\contentsline {section}{\numberline {1.3}Outline}{3}{section.1.3}
+\contentsline {chapter}{\numberline {2}Initial Work}{5}{chapter.2}
+\contentsline {section}{\numberline {2.1}Data Storage Analysis Background}{6}{section.2.1}
+\contentsline {section}{\numberline {2.2}Approach}{6}{section.2.2}
+\contentsline {section}{\numberline {2.3}Procedure}{7}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Data Preprocessing}{7}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}Mapping Data}{7}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {2.3.3}Graphics}{13}{subsection.2.3.3}
+\contentsline {section}{\numberline {2.4}Results}{14}{section.2.4}
+\contentsline {chapter}{\numberline {3}Related Works in Parallel Coordinates}{20}{chapter.3}
+\contentsline {section}{\numberline {3.1}Parallel Coordinates Background}{20}{section.3.1}
+\contentsline {section}{\numberline {3.2}Data Binning}{21}{section.3.2}
+\contentsline {section}{\numberline {3.3}Temporal Depth Cues}{22}{section.3.3}
+\contentsline {section}{\numberline {3.4}Dimension Reordering}{23}{section.3.4}
+\contentsline {section}{\numberline {3.5}Visualization Enhancing Curves}{24}{section.3.5}
+\contentsline {section}{\numberline {3.6}Common Objective}{26}{section.3.6}
+\contentsline {chapter}{\numberline {4}Data Storage System Visualization}{28}{chapter.4}
+\contentsline {section}{\numberline {4.1}Dataset Overview}{28}{section.4.1}
+\contentsline {section}{\numberline {4.2}Continuous Axes}{31}{section.4.2}
+\contentsline {section}{\numberline {4.3}Discrete Axes}{32}{section.4.3}
+\contentsline {section}{\numberline {4.4}Circular Histograms}{34}{section.4.4}
+\contentsline {section}{\numberline {4.5}Focus+Context}{37}{section.4.5}
+\contentsline {subsubsection}{Brushing}{37}{section*.4}
+\contentsline {subsubsection}{Focus}{39}{section*.5}
+\contentsline {section}{\numberline {4.6}Thread Coloring}{39}{section.4.6}
+\contentsline {subsection}{\numberline {4.6.1}Thread Identification Algorithm}{40}{subsection.4.6.1}
+\contentsline {subsection}{\numberline {4.6.2}Unique Color Generation}{43}{subsection.4.6.2}
+\contentsline {section}{\numberline {4.7}Implementation}{43}{section.4.7}
+\contentsline {subsection}{\numberline {4.7.1}Languages and Frameworks}{43}{subsection.4.7.1}
+\contentsline {subsection}{\numberline {4.7.2}Data Preprocessing}{43}{subsection.4.7.2}
+\contentsline {subsection}{\numberline {4.7.3}Rendering}{44}{subsection.4.7.3}
+\contentsline {subsection}{\numberline {4.7.4}Usability}{44}{subsection.4.7.4}
+\contentsline {chapter}{\numberline {5}Results}{46}{chapter.5}
+\contentsline {section}{\numberline {5.1}Images}{46}{section.5.1}
+\contentsline {section}{\numberline {5.2}Tool Comparison}{55}{section.5.2}
+\contentsline {section}{\numberline {5.3}User Study}{59}{section.5.3}
+\contentsline {section}{\numberline {5.4}Known Limitations}{59}{section.5.4}
+\contentsline {section}{\numberline {5.5}Conclusion}{60}{section.5.5}
+\contentsline {chapter}{\numberline {6}Future Work}{62}{chapter.6}
+\contentsline {chapter}{Bibliography}{64}{chapter*.6}
+\contentsline {chapter}{\numberline {A}User Study}{68}{appendix.A}
+\contentsline {section}{\numberline {A.1}User Study Questions}{68}{section.A.1}
+\contentsline {section}{\numberline {A.2}User Study Responses}{70}{section.A.2}
+\contentsline {chapter}{\numberline {B}Data Storage System Visualization Documentation}{74}{appendix.B}
+\contentsline {section}{\numberline {B.1}Axes}{74}{section.B.1}
+\contentsline {subsection}{\numberline {B.1.1}Hide}{75}{subsection.B.1.1}
+\contentsline {subsection}{\numberline {B.1.2}Show}{75}{subsection.B.1.2}
+\contentsline {subsection}{\numberline {B.1.3}Rearrange}{77}{subsection.B.1.3}
+\contentsline {subsection}{\numberline {B.1.4}Brush}{77}{subsection.B.1.4}
+\contentsline {subsection}{\numberline {B.1.5}Equation}{78}{subsection.B.1.5}
+\contentsline {section}{\numberline {B.2}Modes}{80}{section.B.2}
+\contentsline {subsection}{\numberline {B.2.1}Overview Mode}{80}{subsection.B.2.1}
+\contentsline {subsection}{\numberline {B.2.2}Focus Mode}{81}{subsection.B.2.2}
+\contentsline {subsection}{\numberline {B.2.3}Color Threads Mode}{82}{subsection.B.2.3}
+\contentsline {section}{\numberline {B.3}Transformations}{85}{section.B.3}
+\contentsline {subsection}{\numberline {B.3.1}Translate (Pan)}{85}{subsection.B.3.1}
+\contentsline {subsection}{\numberline {B.3.2}Scale (Zoom)}{85}{subsection.B.3.2}
+\contentsline {subsection}{\numberline {B.3.3}Reset}{87}{subsection.B.3.3}
+\contentsline {section}{\numberline {B.4}Dataset}{87}{section.B.4}
+\contentsline {subsection}{\numberline {B.4.1}Open}{88}{subsection.B.4.1}
+\contentsline {subsection}{\numberline {B.4.2}Indicator}{88}{subsection.B.4.2}
+\contentsline {section}{\numberline {B.5}Labels}{89}{section.B.5}
+\contentsline {subsection}{\numberline {B.5.1}Title}{89}{subsection.B.5.1}
+\contentsline {subsection}{\numberline {B.5.2}Discrete}{89}{subsection.B.5.2}
+\contentsline {subsection}{\numberline {B.5.3}Continuous}{91}{subsection.B.5.3}

@@ -1,0 +1,139 @@
+\begin{thebibliography}{10}
+
+\bibitem{chs:2009}
+{Hard Drive Model}.
+\newblock
+  \url{http://3.bp.blogspot.com/_W64Onuz0TgA/SwaxTjUY6kI/AAAAAAAAABQ/xoQeVvjeLFo/s320/300px-Disk-structure.svg.png},
+  November 2009.
+\newblock A concise figure illustrating the various positioning attributes of a
+  hard disk.
+
+\bibitem{internal:collab}
+{Chris Lupo, John Oliver, and Western Digital Corporation}.
+\newblock Data storage system research collaborative.
+\newblock A collaborative effort between Cal Poly and Western Digital intended
+  to analyze various workloads of corporate data centers in order to address
+  areas of improvement in disk utilization.
+
+\bibitem{ibm:manual}
+International Business~Machines Corporation.
+\newblock Deskstar 40gv and 75gxp specifications.
+\newblock Product Manual, International Business Machines Corporation, 2000.
+
+\bibitem{qt:nokia}
+Nokia Corporation.
+\newblock {Qt - A cross-platform application and UI framework}.
+\newblock \url{http://qt.nokia.com/products/}.
+
+\bibitem{quantum:manual}
+Quantum Corporation.
+\newblock Quantum fireball specifications.
+\newblock Product Manual, Quantum Corporation, 1996.
+
+\bibitem{internal:requirements}
+Western~Digital Corporation.
+\newblock Internal conversations regarding internal software tools currently
+  used to analyze storage system workloads.
+
+\bibitem{Graham:2003:UCE}
+Martin Graham and Jessie Kennedy.
+\newblock Using curves to enhance parallel coordinate visualizations.
+\newblock In {\em Proceedings of the Seventh International Conference on
+  Information Visualization}, pages 10--16, Washington, DC, USA, 2003. IEEE
+  Computer Society.
+
+\bibitem{ncq:whitepaper}
+Amber Huffman and Joni Clark.
+\newblock {Serial ATA Native Command Queuing}.
+\newblock White paper, Intel Corporation and Seagate Technology
+  \url{http://www.seagate.com/content/pdf/whitepaper/D2c_tech_paper_intc-stx_sata_ncq.pdf},
+  July 2003.
+
+\bibitem{Inselberg:1990:PCT:949531.949588}
+Alfred Inselberg and Bernard Dimsdale.
+\newblock Parallel coordinates: A tool for visualizing multi-dimensional
+  geometry.
+\newblock In {\em Proceedings of the 1st Conference on Visualization '90}, VIS
+  '90, pages 361--378, Los Alamitos, CA, USA, 1990. IEEE Computer Society
+  Press.
+
+\bibitem{johansson:2007:DCDTPC}
+Jimmy Johansson, Patric Ljung, and Matthew Cooper.
+\newblock Depth cues and density in temporal parallel coordinates.
+\newblock In {\em EuroVis}, pages 35--42, 2007.
+
+\bibitem{website:pc_guide}
+Charles~M. Kozierok.
+\newblock {PC Guide Reference - Hard Disk Tracks, Cylinders and Sectors}.
+\newblock \url{http://www.pcguide.com/ref/hdd/geom/tracks_ZBR.htm}, 2001.
+\newblock A concise figure, illustrating the zone bit recording layout of a
+  hard disk.
+
+\bibitem{McDonnell_Mueller_2008}
+Kevin McDonnell and Klaus Mueller.
+\newblock Illustrative parallel coordinates.
+\newblock {\em Computer Graphics Forum}, 27(3):1031--1038, 2008.
+
+\bibitem{pcmark:whitepaper}
+Sami Niemelä.
+\newblock {PCMark05 PC Performance Analysis}.
+\newblock White paper, Futuremark Corporation
+  \url{http://www.futuremark.com/pressroom/companypdfs/PCMark05_Whitepaper_1_0.pdf?m=v},
+  June 2005.
+
+\bibitem{novotny:2006:OPFC}
+Matej Novotny and Helwig Hauser.
+\newblock Outlier-preserving focus+context visualization in parallel
+  coordinates.
+\newblock {\em IEEE Transactions on Visualization and Computer Graphics},
+  12(9):893--900, November 2006.
+
+\bibitem{chsmapping:2}
+Viral Patel.
+\newblock {LBA to CHS Translation}.
+\newblock \url{http://www.viralpatel.net/taj/tutorial/chs_translation.php}.
+\newblock Descrption of the method and equations to map from LBA to CHS tuples.
+
+\bibitem{peng:2005:CRMD}
+Wei Peng, Matthew~O. Ward, and Elke~A. Rundensteiner.
+\newblock Clutter reduction in multi-dimensional data visualization using
+  dimension reordering.
+\newblock {\em IEEE Symposium on Information Visualization}, 24(4):89--96,
+  January 2005.
+
+\bibitem{steven:source}
+Steven Pungdumri.
+\newblock Data storage system visualization.
+\newblock \url{https://github.com/spung/storage_system_info_vis}, February
+  2012.
+\newblock Open source code for the visualization tool developed in this paper.
+
+\bibitem{steven:doc}
+Steven Pungdumri.
+\newblock Data storage system visualization documentation.
+\newblock
+  \url{http://steven.pungdumri.com/data-storage-system-analysis-documentation.html},
+  February 2012.
+\newblock User documentation for the visualization tool developed in this
+  paper.
+
+\bibitem{internal:understanding}
+Western Digital~Corporation Scott~Olds, Wayne~Vinson.
+\newblock Understanding drive performance: Performance architecture, modeling,
+  and algorithms.
+\newblock Internal document provided through Cal Poly Data Storage System
+  Research Collaborative.
+
+\bibitem{chsmapping:1}
+Dr.~Ulrich Straub.
+\newblock {LBA and CHS format, LBA mapping}.
+\newblock \url{http://www.boot-us.com/gloss11.htm}, November 2011.
+\newblock Descrption of the method and equations to map from LBA to CHS tuples.
+
+\bibitem{website:binning}
+Kimberly M.~Vogt Thomas J.~Fellers and Michael~W. Davidson.
+\newblock {CCD} signal-to-noise ratio.
+\newblock
+  \url{http://www.microscopyu.com/tutorials/java/digitalimaging/signaltonoise/index.html}.
+
+\end{thebibliography}

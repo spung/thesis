@@ -1,0 +1,61 @@
+This is BibTeX, Version 0.99d (TeX Live 2011)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: storage_system_vis.aux
+The style file: plain.bst
+Database file #1: bibliography.bib
+Warning--string name "april" is undefined
+--line 169 of file bibliography.bib
+Warning--entry type for "chsmapping:1" isn't style-file defined
+--line 311 of file bibliography.bib
+Warning--entry type for "chsmapping:2" isn't style-file defined
+--line 331 of file bibliography.bib
+A bad cross reference---entry "johansson:2007:DCDTPC"
+refers to entry "DBLP:conf/vissym/2007", which doesn't exist
+Warning--I didn't find a database entry for "DBLP:conf/vissym/2007"
+Warning--to sort, need author or key in chs:2009
+Name 1 in "Thomas J. Fellers, Kimberly M. Vogt, and Michael W. Davidson" has a comma at the end for entry website:binning
+while executing---line 1049 of file plain.bst
+Name 1 in "Thomas J. Fellers, Kimberly M. Vogt, and Michael W. Davidson" has a comma at the end for entry website:binning
+while executing---line 1090 of file plain.bst
+You've used 21 entries,
+            2118 wiz_defined-function locations,
+            620 strings with 8253 characters,
+and the built_in function-call counts, 5548 in all, are:
+= -- 550
+> -- 199
+< -- 3
++ -- 81
+- -- 60
+* -- 269
+:= -- 893
+add.period$ -- 69
+call.type$ -- 21
+change.case$ -- 93
+chr.to.int$ -- 0
+cite$ -- 22
+duplicate$ -- 203
+empty$ -- 526
+format.name$ -- 60
+if$ -- 1222
+int.to.chr$ -- 0
+int.to.str$ -- 21
+missing$ -- 6
+newline$ -- 112
+num.names$ -- 40
+pop$ -- 161
+preamble$ -- 1
+purify$ -- 72
+quote$ -- 0
+skip$ -- 178
+stack$ -- 0
+substring$ -- 252
+swap$ -- 45
+text.length$ -- 3
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 84
+warning$ -- 1
+while$ -- 53
+width$ -- 23
+write$ -- 225
+(There were 3 error messages)

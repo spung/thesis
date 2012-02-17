@@ -1,0 +1,225 @@
+
+% Cal Poly Thesis
+% 
+% based on UC Thesis format
+%
+% modified by Mark Barry 2/07.
+%
+
+
+
+
+\documentclass[12pt]{ucthesis}
+
+\usepackage{ifpdf} 
+\ifx\pdfoutput\undefined
+    \pdffalse % we are not running PDFLaTeX
+\else
+\pdfoutput=1 % we are running PDFLaTeX
+\pdftrue \fi
+
+\usepackage{url}
+\ifpdf
+
+    \usepackage[pdftex]{graphicx}
+    % Update title and author below...
+    \usepackage[pdftex,plainpages=false,breaklinks=true,colorlinks=true,urlcolor=blue,citecolor=blue,%
+                                       linkcolor=blue,bookmarks=true,bookmarksopen=true,%
+                                       bookmarksopenlevel=3,pdfstartview=FitV,
+                                       pdfauthor={!!Author goes here!!},
+                                       pdftitle={!!Title goes here!!},
+                                       pdfkeywords={Bus trace analysis, information visualization, storage system, SAS SATA bus activity, data mining, workload, parallel coordinates, focus+context.}
+                                       ]{hyperref}
+    %Options with pdfstartview are FitV, FitB and FitH
+    \pdfcompresslevel=1
+
+\else
+    \usepackage{graphicx}
+\fi
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage[letterpaper]{geometry}
+\usepackage[overload]{textcase}
+
+
+
+\bibliographystyle{abbrv}
+
+\setlength{\parindent}{0.25in} \setlength{\parskip}{6pt}
+
+\geometry{verbose,nohead,tmargin=1.25in,bmargin=1in,lmargin=1.5in,rmargin=1.3in}
+
+\setcounter{tocdepth}{2}
+
+
+% Different font in captions (single-spaced, bold) ------------
+\newcommand{\captionfonts}{\small\bf\ssp}
+
+\makeatletter  % Allow the use of @ in command names
+\long\def\@makecaption#1#2{%
+  \vskip\abovecaptionskip
+  \sbox\@tempboxa{{\captionfonts #1: #2}}%
+  \ifdim \wd\@tempboxa >\hsize
+    {\captionfonts #1: #2\par}
+  \else
+    \hbox to\hsize{\hfil\box\@tempboxa\hfil}%
+  \fi
+  \vskip\belowcaptionskip}
+\makeatother   % Cancel the effect of \makeatletter
+% ---------------------------------------
+
+
+
+
+\begin{document}
+
+% Declarations for Front Matter
+
+% Update fields below!
+\title{An Interactive Visualization Model for Analyzing Data Storage System Workloads}
+\author{Steven Pungdumri}
+\degreemonth{February} \degreeyear{2011} \degree{Master of Science}
+\defensemonth{February} \defenseyear{2011}
+\numberofmembers{3} \chair{John Oliver, Ph.D.} \othermemberA{Chris Lupo, Ph.D.} \othermemberB{Zo\"{e} Wood, Ph.D.} \field{Computer Engineering} \campus{San Luis Obispo}
+\copyrightyears{seven}
+
+
+
+\maketitle
+
+\begin{frontmatter}
+
+% Custom made for Cal Poly (by Mark Barry, modified by Andrew Tsui).
+\copyrightpage
+
+% Custom made for Cal Poly (by Andrew Tsui).
+\committeemembershippage
+
+\begin{abstract}
+
+In this paper, we present an approach that utilizes parallel coordinates to visualize SAS and SATA workload datasets. Parallel coordinates is a graphical technique which plots multivariate data onto a two-dimensional representation. Within this area of research, methods of user interaction that enhance the ability to extract valuable information from data are often proposed, each intending to be a more effective method of interacting with the visualization for a particular dataset of interest. 
+
+The ability to visualize and analyze storage system workload datasets, specifically bus activity traces between host and storage systems would be greatly beneficial for storage system developers and administrators. This solution includes techniques such as: parallel coordinates, an approach to visualizing the distribution of dimensions with discrete values, a method of visualizing perceived threads, and a focus+context mode. The resulting implementation is capable of analyzing captured workload datasets and effectively communicating valuable information such as common trends, outliers, and interleaved threads. Our solution is intended to aid storage system developers in their research and development, as well as their consultations with their customers by offering a visualization framework that can be further developed to address additional needs for analyzing storage system workload datasets in particular. We have used these techniques to analyze real-world captured workload data and tested our solution with storage system developers and administrators.
+
+
+\end{abstract}
+
+\begin{acknowledgements}
+
+First, I would like to thank Dr. Chris Lupo, Dr. John Oliver, and Dr. Zoe Wood for their help and guidance for my thesis project as well as for their guidance through my university career. I would like to thank Dave Hamilton, Scott Olds, David Renuart, and Western Digital who provided a bus analyzer and domain expertise to this ongoing storage system research effort.
+
+Finally, I would like to thank my family for supporting me throughout my university career; I do not know where I would be today without them.
+
+\end{acknowledgements}
+
+
+\tableofcontents
+
+
+\listoftables
+
+\listoffigures
+
+\end{frontmatter}
+
+\pagestyle{plain}
+
+
+
+
+\renewcommand{\baselinestretch}{1.66}
+
+
+% ------------- Main chapters here --------------------
+
+
+
+
+
+\chapter{Introduction}
+\label{intro}
+
+Modeling Serial Attached SCSI (SAS) and Serial Advanced Technology Attachment (SATA) workloads, specifically bus activity traces between host and storage systems for analysis would be greatly beneficial for storage system developers and administrators.  Current bus analyzer software tools often focus on bus protocol rather than giving a broad overview of what is occurring between host and storage.  Analysis from such a model could potentially lead to insights in what is efficient or inefficient about a particular system design or application. 
+
+Many of the more sophisticated offerings of bus trace analysis tools are developed in house by corporations interested in optimizing their products or systems, rather than the vendors of the bus analyzers.  Current methods produced by our storage system developer partner generates graphs which are static and do not allow manipulations to the visualization while viewing the data, lacking functions such as zooming in on areas of interest, and highlighting interesting trends.  At most, these tools offer various graphs comparing two dimensions of data at a time, as well as statistical reports of the input data.  These tools are also completely dependent on the user to identify meaningful results from self-observations.  Although these tools are simple and can prove effective, it is not possible to view more than two dimensions of records at once.  This narrow view is less likely to convey a larger picture of the activity between host and storage.
+
+We propose a tool that incorporates statistical and information visualization techniques, as both an alternative and an addition to current tools available.  An initial statistical analysis would identify the ratio of accesses on dimensions with discrete values.  This means that discovering potentially interesting trends would no longer be a process relying solely on the individual user, but also incorporate common statistical methods to display trends as well. 
+
+ Following the statistical analysis, the user would be presented with the data, graphed using parallel coordinates~\cite{hauser2002}--a technique used commonly in information visualization for viewing data with multiple dimensions.  This tool would provide the user with an interactive experience in visualizing the bus trace data, allowing the user to manipulate the graph by reordering axes, concealing axes, highlighting particular ranges of data, scaling particular areas, applying focus+context on ranges of interest, and coloring machine identified threads.  This tool would accommodate bus traces of varying sizes, whether the dataset is a single disk used in a personal computer configuration or a large-scale data center.
+
+The rest of this paper is organized as follows. In Section 2 we describe related works in parallel coordinates and how they could contribute towards this area of application. In Section 3 we formally describe our visualization tool and its contributions toward analyzing storage systems, outlining the various functionality implemented in the visualization tool. Section 4 details the algorithms and methods used to implement some of the functionality previously outlined. Section 5 describes conducting a user study that involves data storage system designers utilizing the tool to analyze a dataset from a corporate datacenter capture. In Section 6 we reflect on our implementation and ideas for future work.
+
+\begin{figure}
+\begin{center}
+\includegraphics[height=40mm]{example_figure.pdf}
+\captionfonts
+\caption[This is a figure]{This is an example figure.  This graphic was drawn in InkScape (http://www.inkscape.org/), a free vector drawing application.  Figures can be exported from InkScape as PDF images or as EPS (depending upon if you want LaTeX to generate a PDF or a PostScript document.)}
+\label{fig:inkscape-example}
+\end{center}
+\end{figure}
+
+
+
+\chapter{Previous Work}
+\label{previous-work}
+
+Parallel coordinates is a commonly utilized method of visualizing datasets with many dimensions. Areas of further research usually entail the implementation of an additional approach for user interaction or mode of visualization which makes the overall tool more effective pertaining to datasets in a particular area of research. With each contribution of research, it is apparent that each specific area of research has its own requirements, and that certain methods that are extremely effective on datasets of one area may not be effective at all on datasets of another. This section describes a few related works with novel additions to parallel coordinates designed for datasets of other areas of interest, some more likely useful for modeling data storage system captures, and some not.
+
+One particular paper was very effective in illustrating context and outliers by applying a binned data method~\cite{novotny:2006:OPFC}. This implementation used a preprocess data binning approach to identify common trends between each pair of dimensions, which made it easier to visually comprehend these trends as well as reducing the load on rendering by rendering parallelograms for each grouping rather than individual polylines. They proceeded to identify outliers by leveraging their data binning and rendered these with the typical approach using polylines to ensure their distinction, and rendered the user specified focus (brushing) with the same method as well. This implementation of parallel coordinates seems it would be effective for any general dataset that requires the identification of trends, outliers, and user focus, and would be a promising area to investigate for the future work of our tool.
+
+Another work investigates the illustration of depth cues in temporal parallel coordinates~\cite{johansson:2007:DCDTPC}. This research produced a temporal window by constructing density maps and utilizing transfer functions. A depth cue visualization was produced based on temporal binning, perception based coloring, and concepts from volume rendering. Because the value from an in-depth temporal analysis would illustrate how significant the dataset changes over varying time periods, this approach does not seem as effective when applied to a data storage analysis dataset. 
+
+Dimension reordering, while it seems of lesser importance, is another area of parallel coordinates researched to reduce clutter in visualizations~\cite{peng:2005:CRMD}. Although most implementations of parallel coordinates allow manual reordering, this can be exhaustive when searching for a more effective ordering of dimensions. This particular implementation defined a metric used to measure the amount of clutter, and applied it to all possible arrangements to identify the one with the least amount of clutter. This metric relies on normalized Euclidean distances between data points and a user adjustable threshold to determine the sensitivity of clutter detection. From here, a few algorithms were proposed for optimally searching for the least cluttered arrangement. While this is an interesting approach, we would like to accumulate more feedback from experts in our data storage system domain and analyze if any trends appear for the arrangement of dimensions that is most effective, and whether it correlates to the amount of clutter observed before incorporating this functionality in our tool.
+
+Each of these prior additions to parallel coordinates are novel and prove valuable for the datasets from particular areas of research they chose to model. With respect to modeling captures from data storage systems, we gathered specific requirements from Western Digital by observing what their current tools aid them in, and inquiring what they as domain experts, would find interesting to be able to observe. With these observations, we implemented our addition to parallel coordinates that addresses their current needs as well as functionality anticipated to be valuable when analyzing their datasets.
+
+\section{Data Storage System Visualization}
+\label{data-storage-system-visualization}
+
+We present an information visualization tool that analyzes data storage system workloads through bus analyzer captures. This tool is intended for storage system designers, administrators, and others interested in gaining insight in these workloads. Our tool allows users to model bus analyzer captures of data storage system workloads, and provides the following possible manipulations.
+
+\subsection{Overview}
+Users begin the visualization with an overview of all storage commands displayed using traditional parallel coordinates. At any point, the user can perform transformations on the model including scaling in and out, as well as translations vertically or horizontally.
+
+\begin{figure}[htb]
+ \centering
+ \includegraphics[width=3.5in]{overview.eps}
+ \caption{Overview mode of a sample storage system workload dataset with all dimensions displayed.}
+\end{figure}
+
+\subsection{Axes}
+All axes are defaulted to being shown, although they can be hidden or revealed at any point, as well as rearranged for more relevant comparisons between axes. Axes can be displayed with either a linear or logarithmic scale, and particular dimensions are defaulted as such in order to display the spread of values more effectively according to the nature of the dimension. Most axes are categorized as containing continuous values. When a user focus is applied, the minimum and maximum values for continuous axes are adjusted to those of the focus in order to spread the values specifically in the area of interest.
+
+\subsubsection{Discrete Axes}
+Particular axes, namely: Queued, Command, Alignment, Forced Unit Access (FUA), Sequential, and Cache Hit are recognized as axes with discrete values. This is taken to account when parsing input data and displaying the visualization. Discrete Axes will show the full range of the possible values found in the dataset regardless of the current user set focus (although the values themselves will not be visible if they are outside of the user set focus).
+
+Another defining feature of discrete axes are circular histograms. Previous attempts at more effectively illustrating the density of one to many values on particular dimensions as well as clarifying crossover ambiguity include the use of curves and point spread ~\cite{martin:2003:UCEP}, context generation ~\cite{novotny:2006:OPFC}, and basic overlays of histograms. We decided to avoid point spreading because it can potentially mislead the user with the deliberately altered point positions, and favor an under-laying histogram approach in order to preserve the significance of the command values rather than the histograms themselves. Initially we implemented traditional histogram rectangles, but found they were hard to observe for particular values with more dense spreads. We instead implement circular histograms with radii corresponding to the proportional ratio for each sum of discrete values in the dataset (constrained to the user specified focus if applied). This approach preserves both the significance of the command values, as well as the illustration of trends across discrete axes.
+
+\begin{figure}[htb]
+ \centering
+ \includegraphics[width=1.5in]{discrete.eps}
+ \caption{Overview mode of a sample storage system workload dataset with all dimensions displayed.}
+\end{figure}
+
+\subsection{Focus+Context}
+Users have two methods of applying focus to the visualization, brushing a range of data on a particular axis and applying a user specified focus on a particular axis, both which extend to the rest of the axes.
+\subsubsection{Brushing}
+Brushing is a common feature in parallel coordinates that allows users to brush a particular range on an axis a distinct color, in this case red. Users can apply this technique that will extend to other axes and brush red all commands that fall under the scope selected.
+\subsubsection{Focus}
+Users can apply a focus on the dataset, which crops out all command values outside of the specified range. Applying a focus allows users to examine a smaller, often more manageable subset of data in order to observe occurrences specific to this particular data storage domain such as interleaved threads and LBA banding.
+
+\begin{figure}[htb]
+ \centering
+ \includegraphics[width=3.5in]{interleaved_bw.eps}
+ \caption{Overview mode of a sample storage system workload dataset with all dimensions displayed.}
+\end{figure}
+
+\begin{figure}[htb]
+ \centering
+ \includegraphics[width=3.5in]{brush_focus5.eps}
+ \caption{Overview mode of a sample storage system workload dataset with all dimensions displayed.}
+\end{figure}
+
+\subsection{Thread Coloring}
+Data storage designers expressed an interest in identifying interleaved threading, an occurrence where multiple running threads access the storage device in turn, which can lead to LBA banding. In order to illustrate interleaved threads, we implement an algorithm that identifies threads using a predefined LBA threshold and knowledge of the maximum queue depth in the dataset. We maintain a collection that contains threads we
